@@ -1,0 +1,270 @@
+* {margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Hide scrollbar for Chromium */
+ ::-webkit-scrollbar {
+  display: none;
+}
+
+#principal{
+  font-family: Calibri;
+  background-color: #333;
+  color: white;
+}
+
+#titlebar{
+  background-color: #333;
+  height: 32px;
+}
+
+#titlebar #drag-region {
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
+}
+
+#window-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 46px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 32px;
+}
+
+#window-controls .button {
+  grid-row: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#min-button {
+  grid-column: 1;
+  text-align: center;
+}
+#max-button, #restore-button {
+  grid-column: 2;
+  text-align: center;
+}
+#close-button {
+  grid-column: 3;
+  text-align: center;
+}
+
+#window-controls {
+  -webkit-app-region: no-drag;
+}
+
+#window-controls .button {
+  text-align: right;
+  user-select: none;
+}
+#window-controls .button:hover {
+  background: rgba(255,255,255,0.1);
+}
+#window-controls .button:active {
+  background: rgba(255,255,255,0.2);
+}
+
+#close-button:hover {
+  background: #E81123 !important;
+}
+#close-button:active {
+  background: #F1707A !important;
+}
+
+#close-button:active .icon {
+  filter: invert(1);
+}
+
+#restore-button {
+  display: none !important;
+}
+
+#titlebar #drag-region {
+  display: grid;
+  grid-template-columns: auto 138px;
+}
+
+#window-title {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  overflow: hidden;
+}
+
+#window-title span #titletext{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin-left: 50px;
+}
+
+.maximized #titlebar {
+  width: 100%;
+  padding: 0;
+}
+
+.maximized #window-title {
+  margin-left: 12px;
+}
+
+.maximized #restore-button {
+  display: flex !important;
+}
+
+.maximized #max-button {
+  display: none;
+}
+
+.main-container{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.main-title{
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+/*Hide Spin Button*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.item1{ grid-area: fecha; }
+.item2{ grid-area: hora; }
+.item3{ grid-area: cama; }
+.item4{ grid-area: nombre; }
+.item5{ grid-area: no_expediente; }
+.item6{ grid-area: edad; }
+.item7{ grid-area: sexo; }
+.item8{ grid-area: talla; }
+.item9{ grid-area: peso; }
+.item10{ grid-area: diag_preoper; }
+.item11{ grid-area: oper_proy; }
+.item12{ grid-area: dm; }
+.item13{ grid-area: has; }
+.item14{ grid-area: cardiopatas; }
+.item15{ grid-area: ca; }
+.item16{ grid-area: tb; }
+.item17{ grid-area: evc; }
+.item18{ grid-area: otras; }
+.item19{ grid-area: originario; }
+.item20{ grid-area: residente; }
+.item21{ grid-area: grupo; }
+.item22{ grid-area: rh; }
+.item23{ grid-area: religion; }
+.item24{ grid-area: tabaquismo; }
+.item25{ grid-area: frecuencia_tab; }
+.item26{ grid-area: alcoholismo; }
+.item27{ grid-area: frecuencia_alc; }
+.item28{ grid-area: habitos_diet; }
+.item29{ grid-area: aseo_dental; }
+.item30{ grid-area: toxicomanias; }
+.item31{ grid-area: toxicom_desc; }
+.item32{ grid-area: anestesico_quir; }
+.item33{ grid-area: complicaciones; }
+.item34{ grid-area: complic_desc; }
+.item35{ grid-area: transfuncionales; }
+.item36{ grid-area: transfunc_desc; }
+.item37{ grid-area: alergicos; }
+.item38{ grid-area: asmaticos; }
+.item39{ grid-area: diabetes; }
+.item40{ grid-area: tratamiento_diab; }
+.item41{ grid-area: hipertension; }
+.item42{ grid-area: tratamiento_hiper; }
+.item43{ grid-area: cardiopatias; }
+.item44{ grid-area: hepaticos; }
+.item45{ grid-area: neurologicos; }
+.item46{ grid-area: traumaticos; }
+.item47{ grid-area: nefropatias; }
+.item48{ grid-area: endocrinopatias; }
+.item49{ grid-area: obesidad; }
+.item50{ grid-area: neopasicos; }
+.item51{ grid-area: evc_desc; }
+.item52{ grid-area: obs_per_pat; }
+.item53{ grid-area: ta; }
+.item54{ grid-area: fc; }
+.item55{ grid-area: fr; }
+.item56{ grid-area: temperatura; }
+.item57{ grid-area: craneo; }
+.item58{ grid-area: pupilas; }
+.item59{ grid-area: conjuntivas; }
+.item60{ grid-area: narinas; }
+.item61{ grid-area: mucosa_oral; }
+.item62{ grid-area: protesis_dentales; }
+.item63{ grid-area: tipo_pro_dent; }
+.item64{ grid-area: mallampati; }
+.item65{ grid-area: patil_aldretti; }
+.item66{ grid-area: apertura_oral; }
+.item67{ grid-area: pro_int_dif; }
+.item68{ grid-area: cuello; }
+.item69{ grid-area: traquea; }
+.item70{ grid-area: cardiopulmonar; }
+.item71{ grid-area: abdomen; }
+.item72{ grid-area: extremidades; }
+.item73{ grid-area: resto_ef; }
+.item74{ grid-area: fecha_realza; }
+.item75{ grid-area: hb; }
+.item76{ grid-area: hto; }
+.item77{ grid-area: leucocitos; }
+.item78{ grid-area: plaquetas; }
+.item79{ grid-area: glucosa; }
+.item80{ grid-area: urea; }
+.item81{ grid-area: creatinina; }
+.item82{ grid-area: tp; }
+.item83{ grid-area: ttpa; }
+.item84{ grid-area: inr; }
+.item85{ grid-area: otros; }
+.item86{ grid-area: fecha_val_cardvsc; }
+.item87{ grid-area: ecg; }
+.item88{ grid-area: rx_torac; }
+.item89{ grid-area: espirometria; }
+.item90{ grid-area: cv; }
+.item91{ grid-area: cvf; }
+.item92{ grid-area: vmv; }
+.item93{ grid-area: vef1; }
+.item94{ grid-area: fef25_75; }
+.item95{ grid-area: gasometria; }
+.item96{ grid-area: ph; }
+.item97{ grid-area: pco2; }
+.item98{ grid-area: po2; }
+.item99{ grid-area: hco3; }
+.item100{ grid-area: eb; }
+.item101{ grid-area: sato2; }
+.item102{ grid-area: goldman; }
+.item103{ grid-area: asa; }
+.item104{ grid-area: riesgo_tromboemb; }
+.item105{ grid-area: raq_ue; }
+.item106{ grid-area: raq_14; }
+.item107{ grid-area: raq_ab; }
+.item108{ grid-area: plan_anast_suger; }
+.item109{ grid-area: obs_lab_gab; }
+.item110{ grid-area: se_recom_operar; }
+.item111{ grid-area: obs_recom_oper; }
+.item112{ grid-area: nombre_medico; }
+.item113{ grid-area: clave; }
+.item114{ grid-area: submit; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'fecha  hora    hora    cama'
+    'nombre nombre  nombre  no_expediente'
+    'edad   sexo    talla   peso'
+    
+    'submit submit  submit  submit';
+  gap: 10px;
+  padding: 10px;
+}

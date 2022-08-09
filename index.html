@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body id="principal">
+    <header id="titlebar" class="sticky-top">
+      <div id="drag-region">
+        <div id="window-title">
+          <span id="titletext">Vaprethia</span>
+        </div>
+        <div id="window-controls">
+
+          <div class="button" id="min-button">
+            <img class="icon" src="icons/min-w-10.png" draggable="false" />
+          </div>
+    
+          <div class="button" id="max-button">
+            <img class="icon" srcset="icons/max-w-10.png" draggable="false" />
+          </div>
+
+          <div class="button" id="restore-button">
+            <img class="icon" srcset="icons/restore-w-10.png" draggable="false" />
+          </div>
+    
+          <div class="button" id="close-button">
+            <img class="icon" srcset="icons/close-w-10.png" draggable="false" />
+          </div>
+    
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+      <br>
+      <h1 class="text-center">Hospital general "Dr. Fernando Quiróz G."</h1>
+      <h2 class="text-center">Valoración preanestésica</h2>
+      <form>
+        <input type="hidden" name="clave" id="clave">
+        <div class="grid-container">
+          
+          <div class="mb-3 item1">
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" class="form-control">
+          </div>
+
+          <div class="mb-3 item2">
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" class="form-control">
+          </div>
+
+          <div class="mb-3 item3">
+            <label for="cama">Cama</label>
+            <input type="text" id="cama" class="form-control">
+          </div>
+
+          <div class="mb-3 item4">
+            <label for="nombre">Nombre del paciente</label>
+            <input list="pacientes" class="form-control" id="nombre">
+            <datalist id="pacientes"></datalist>
+          </div>
+
+          <div class="mb-3 item5">
+            <label for="no_expediente">No. Expediente</label>
+            <input type="text" id="n_expediente" class="form-control">
+          </div>
+
+          <div class="mb-3 item6">
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" class="form-control">
+          </div>
+
+          <div class="mb-3 item7">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" class="form-control">
+              <option value="Seleccione">Seleccione</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item8">
+            <label for="talla">Talla</label>
+            <input type="number" id="talla" class="form-control">
+          </div>
+
+          <div class="mb-3 item9">
+            <label for="peso">Peso</label>
+            <input type="number" id="peso" class="form-control">
+          </div>
+
+          <div class="submit grid-item">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script src="./autocomplete.js"></script>
+
+    <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
