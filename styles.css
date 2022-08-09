@@ -255,15 +255,24 @@ input::-webkit-inner-spin-button {
 .item111{ grid-area: obs_recom_oper; }
 .item112{ grid-area: nombre_medico; }
 .item113{ grid-area: clave; }
+
+.item1000{ grid-area: sep_fech_id; }
+.item1001{ grid-area: sep_ante_her; }
 .item114{ grid-area: submit; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
+    'sep_fech_id sep_fech_id sep_fech_id sep_fech_id'
     'fecha  hora    hora    cama'
     'nombre nombre  nombre  no_expediente'
     'edad   sexo    talla   peso'
-    
+    'diag_preoper diag_preoper diag_preoper diag_preoper'
+    'oper_proy oper_proy oper_proy oper_proy'
+
+    'sep_ante_her sep_ante_her sep_ante_her sep_ante_her'
+    'dm has cardiopatas ca'
+    'tb evc otras otras'
     'submit submit  submit  submit';
   gap: 10px;
   padding: 10px;

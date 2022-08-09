@@ -8,7 +8,7 @@ let win
 function createWindow () {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 650,
+    width: 800,
     height: 725,
     frame: false,
     show: false,
