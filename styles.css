@@ -258,9 +258,12 @@ input::-webkit-inner-spin-button {
 
 .item1000{ grid-area: sep_fech_id; }
 .item1001{ grid-area: sep_ante_her; }
-.item114{ grid-area: submit; }
+.item1002{ grid-area: sep_pers_no_pat; }
+.item1003{ grid-area: sep_pers_pat; }
 
-.grid-container {
+.item2000{ grid-area: submit; }
+
+.grid-container-fech-id {
   display: grid;
   grid-template-areas:
     'sep_fech_id sep_fech_id sep_fech_id sep_fech_id'
@@ -268,12 +271,49 @@ input::-webkit-inner-spin-button {
     'nombre nombre  nombre  no_expediente'
     'edad   sexo    talla   peso'
     'diag_preoper diag_preoper diag_preoper diag_preoper'
-    'oper_proy oper_proy oper_proy oper_proy'
+    'oper_proy oper_proy oper_proy oper_proy';
+  gap: 10px;
+  padding: 10px;
+}
 
+.grid-container-antec-hered {
+  display: grid;
+  grid-template-areas:
     'sep_ante_her sep_ante_her sep_ante_her sep_ante_her'
     'dm has cardiopatas ca'
     'tb evc otras otras'
     'submit submit  submit  submit';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-pers-no-pat {
+  display: grid;
+  grid-template-areas:
+    'sep_pers_no_pat sep_pers_no_pat sep_pers_no_pat sep_pers_no_pat'
+    'originario residente grupo rh'
+    'religion religion religion religion'
+    'tabaquismo frecuencia_tab alcoholismo frecuencia_alc'
+    'habitos_diet habitos_diet aseo_dental aseo_dental'
+    'toxicomanias toxicom_desc toxicom_desc toxicom_desc'
+    ;
+
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-buttons {
+  display: grid;
+  grid-template-areas:
+    'submit';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-pers-pat {
+  display: grid;
+  grid-template-areas:
+    'submit';
   gap: 10px;
   padding: 10px;
 }

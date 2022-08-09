@@ -41,8 +41,8 @@
       
       <form>
         <input type="hidden" name="clave" id="clave">
-        <div class="grid-container">
-          
+        <div class="grid-container-fech-id">
+
           <div class="mb-3 item1000">
             <hr>
             <h3>Fecha de identificación</h3>
@@ -107,7 +107,9 @@
             <label for="oper_proy">Operación proyectada</label>
             <input type="text" id="oper_proy" class="form-control">
           </div>
+        </div>
 
+        <div class="grid-container-antec-hered">
           <div class="mb-3 item1001">
             <hr>
             <h3>Antecedentes heredofamiliares</h3>
@@ -172,7 +174,121 @@
             <input type="text" id="otras" class="form-control">
           </div>
 
-          <div class="submit grid-item">
+        </div>
+
+        <div class="grid-container-pers-no-pat">
+
+          <div class="mb-3 item1002">
+            <hr>
+            <h3>Personales no patológicos</h3>
+          </div>
+
+          <div class="mb-3 item19">
+            <label for="originario">Originario</label>
+            <input type="text" id="originario" class="form-control">
+          </div>
+
+          <div class="mb-3 item20">
+            <label for="residente">Residente</label>
+            <input type="text" id="residente" class="form-control">
+          </div>
+
+          <div class="mb-3 item21">
+            <label for="grupo">Grupo</label>
+            <select id="grupo" class="form-control">
+              <option value="No especificado">No especificado</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="AB">AB</option>
+              <option value="O">No</option>
+              <option value="Ignora">Si</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item22">
+            <label for="rh">Rh</label>
+            <select id="rh" class="form-control">
+              <option value="No especificado">No especificado</option>
+              <option value="A">+</option>
+              <option value="B">-</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item23">
+            <label for="religion">Religión</label>
+            <input type="text" id="religion" class="form-control">
+          </div>
+
+          <div class="mb-3 item24">
+            <label for="tabaquismo">Tabaquismo</label>
+            <select id="tabaquismo" class="form-control">
+              <option value="No especificado">No especificado</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item25">
+            <label for="frecuencia_tab">Frecuencia</label>
+            <input type="text" id="frecuencia_tab" class="form-control">
+          </div>
+
+          <div class="mb-3 item26">
+            <label for="alcoholismo">Alcoholismo</label>
+            <select id="alcoholismo" class="form-control">
+              <option value="No especificado">No especificado</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item27">
+            <label for="frecuencia_alc">Frecuencia</label>
+            <input type="text" id="frecuencia_alc" class="form-control">
+          </div>
+
+          <div class="mb-3 item28">
+            <label for="habitos_diet">Hábitos dietéticos</label>
+            <select id="habitos_diet" class="form-control">
+              <option value="No especificado">No especificado</option>
+              <option value="Bueno">Bueno</option>
+              <option value="Regular">Regular</option>
+              <option value="Deficiente">Deficiente</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item29">
+            <label for="aseo_dental">Aseo dental</label>
+            <input type="text" id="aseo_dental" class="form-control">
+          </div>
+
+          <div class="mb-3 item30">
+            <label for="toxicomanias">Toxicomanías</label>
+            <select id="toxicomanias" class="form-control">
+              <option value="No especificado">No especificado</option>
+              <option value="Si">Si</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          <div class="mb-3 item31">
+            <label for="toxicom_desc">Describa las toxicomanías</label>
+            <input type="text" id="toxicom_desc" class="form-control">
+          </div>
+
+        </div>
+
+        <div class=".grid-container-pers-pat">
+          <div class="mb-3 item1003">
+            <hr>
+            <h3>Personales patológicos</h3>
+          </div>
+        </div>
+
+
+
+        <div class="grid-container-buttons">
+          <div class="mb-3 item2000">
             <button type="submit" class="btn btn-primary">Submit</button>
           </div>
         </div>
