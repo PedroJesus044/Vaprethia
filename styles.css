@@ -181,9 +181,9 @@ input::-webkit-inner-spin-button {
 .item37{ grid-area: alergicos; }
 .item38{ grid-area: asmaticos; }
 .item39{ grid-area: diabetes; }
-.item40{ grid-area: tratamiento_diab; }
+/*.item40{ grid-area: tratamiento_diab; }*/
 .item41{ grid-area: hipertension; }
-.item42{ grid-area: tratamiento_hiper; }
+/*.item42{ grid-area: tratamiento_hiper; }*/
 .item43{ grid-area: cardiopatias; }
 .item44{ grid-area: hepaticos; }
 .item45{ grid-area: neurologicos; }
@@ -191,7 +191,7 @@ input::-webkit-inner-spin-button {
 .item47{ grid-area: nefropatias; }
 .item48{ grid-area: endocrinopatias; }
 .item49{ grid-area: obesidad; }
-.item50{ grid-area: neopasicos; }
+.item50{ grid-area: neoplasicos; }
 .item51{ grid-area: evc_desc; }
 .item52{ grid-area: obs_per_pat; }
 .item53{ grid-area: ta; }
@@ -260,8 +260,11 @@ input::-webkit-inner-spin-button {
 .item1001{ grid-area: sep_ante_her; }
 .item1002{ grid-area: sep_pers_no_pat; }
 .item1003{ grid-area: sep_pers_pat; }
+.item1004{ grid-area: sep_explor_fisica; }
 
 .item2000{ grid-area: submit; }
+
+.item3000{ grid-area: aux; }
 
 .grid-container-fech-id {
   display: grid;
@@ -295,17 +298,8 @@ input::-webkit-inner-spin-button {
     'religion religion religion religion'
     'tabaquismo frecuencia_tab alcoholismo frecuencia_alc'
     'habitos_diet habitos_diet aseo_dental aseo_dental'
-    'toxicomanias toxicom_desc toxicom_desc toxicom_desc'
-    ;
+    'toxicomanias toxicom_desc toxicom_desc toxicom_desc';
 
-  gap: 10px;
-  padding: 10px;
-}
-
-.grid-container-buttons {
-  display: grid;
-  grid-template-areas:
-    'submit';
   gap: 10px;
   padding: 10px;
 }
@@ -313,7 +307,42 @@ input::-webkit-inner-spin-button {
 .grid-container-pers-pat {
   display: grid;
   grid-template-areas:
-    'submit';
+    'sep_pers_pat         sep_pers_pat          sep_pers_pat          sep_pers_pat'
+    'anestesico_quir      complicaciones        complic_desc          complic_desc'
+    'transfuncionales     transfunc_desc        transfunc_desc        transfunc_desc'
+    'alergicos            alergicos             alergicos             alergicos'
+    'asmaticos            asmaticos             asmaticos             asmaticos';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-pers-pat-2 {
+  display: grid;
+  grid-template-areas:
+    'diabetes             diabetes              hipertension          hipertension'
+    'cardiopatias         cardiopatias          hepaticos             hepaticos'
+    'neurologicos         neurologicos          traumaticos           traumaticos'
+    'nefropatias          nefropatias           endocrinopatias       endocrinopatias'
+    'obesidad             obesidad              neoplasicos           neoplasicos'
+    'evc_desc             evc_desc              obs_per_pat           obs_per_pat';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-explor-fisica {
+  display: grid;
+  grid-template-areas:
+    'sep_explor_fisica sep_explor_fisica sep_explor_fisica sep_explor_fisica'
+    'ta fc fr temperatura';
+  gap: 10px;
+  padding: 10px;
+}
+
+
+.grid-container-buttons {
+  display: grid;
+  grid-template-areas:
+    'aux submit submit aux';
   gap: 10px;
   padding: 10px;
 }
