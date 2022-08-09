@@ -261,6 +261,7 @@ input::-webkit-inner-spin-button {
 .item1002{ grid-area: sep_pers_no_pat; }
 .item1003{ grid-area: sep_pers_pat; }
 .item1004{ grid-area: sep_explor_fisica; }
+.item1005{ grid-area: sep_lab_y_gab; }
 
 .item2000{ grid-area: submit; }
 
@@ -333,7 +334,25 @@ input::-webkit-inner-spin-button {
   display: grid;
   grid-template-areas:
     'sep_explor_fisica sep_explor_fisica sep_explor_fisica sep_explor_fisica'
-    'ta fc fr temperatura';
+    'ta fc fr temperatura'
+    'craneo pupilas conjuntivas narinas'
+    'mucosa_oral mucosa_oral protesis_dentales tipo_pro_dent'
+    'mallampati patil_aldretti apertura_oral apertura_oral'
+    'pro_int_dif pro_int_dif pro_int_dif pro_int_dif'
+    'cuello cuello traquea traquea'
+    'cardiopulmonar cardiopulmonar cardiopulmonar cardiopulmonar'
+    'abdomen abdomen abdomen abdomen'
+    'extremidades extremidades extremidades extremidades'
+    'resto_ef resto_ef resto_ef resto_ef'
+    ;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-lab-y-gab {
+  display: grid;
+  grid-template-areas:
+    'sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab';
   gap: 10px;
   padding: 10px;
 }
