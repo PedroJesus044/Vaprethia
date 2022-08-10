@@ -263,6 +263,8 @@ input::-webkit-inner-spin-button {
 .item1004{ grid-area: sep_explor_fisica; }
 .item1005{ grid-area: sep_lab_y_gab; }
 .item1006{ grid-area: sep_raq; }
+.item1007{ grid-area: sep_conclusiones; }
+.item1008{ grid-area: sep_datos_medico; }
 
 .item2000{ grid-area: submit; }
 
@@ -372,6 +374,25 @@ input::-webkit-inner-spin-button {
   padding: 10px;
 }
 
+.grid-container-conclusiones {
+  display: grid;
+  grid-template-areas:
+    'sep_conclusiones'
+    'se_recom_operar'
+    'obs_recom_oper';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container-datos-medico {
+  display: grid;
+  grid-template-areas:
+    'sep_datos_medico'
+    'nombre_medico'
+    'clave';
+  gap: 10px;
+  padding: 10px;
+}
 
 .grid-container-buttons {
   display: grid;
