@@ -1,4 +1,4 @@
-create table paciente(
+create table pacientes(
 id integer not null primary key,
 fecha date,
 cama varchar(50),

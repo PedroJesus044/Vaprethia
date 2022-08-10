@@ -1,13 +1,27 @@
-const search = document.getElementById('nombre-paciente');
+const dao = require('./js/dao')
+
+const search = document.getElementById('nombre');
 const matchList = document.getElementById('pacientes');
 
-const searchStates = async searchText =>{
-    const res = await fetch('data/states.json');
-    const states = await res.json();
+var id_paciente = []
+var nombre_paciente = []
 
-    let matches = states.filter(state=>{
+function getPacientes(){
+    //Función que llena el nombre de los pacientes y su ID en dos arrays globales
+    conn = new dao('./sqlite/vaprethia.db')
+    db = conn.db
+
+    db.each("select id, nombre from pacientes", (err, row) => {
+        id_paciente.push(row.id)
+        nombre_paciente.push(row.nombre)
+    });
+}
+
+const searchStates = async searchText =>{
+
+    let matches = nombre_paciente.filter(nombre=>{
         const regex = new RegExp(`^${searchText}`, 'gi');
-        return state.name.match(regex) || state.abbr.match(regex);
+        return nombre.match(regex)
     });
 
     if (searchText.length === 0) {
@@ -22,7 +36,7 @@ const outputHtml = matches =>{
     if (matches.length > 0) {
         const html = matches.map(
             match => `
-            <option value="${match.name}">
+            <option value="${match}">
         `).join('');
         matchList.innerHTML = html;
     }
@@ -32,11 +46,6 @@ search.addEventListener('keypress', function (e) {
     if(e.key !== 'Enter') searchStates(search.value);
 });
 
-//search.addEventListener('input', ()=> searchStates(search.value));
+search.addEventListener('input', ()=> searchStates(search.value));
 
-search.addEventListener('input', function (e) {
-    if(e.inputType===undefined){
-        console.log("Ah que loco");
-    }
-    console.log(document.getElementById("fecha").value)
-});
+getPacientes()
