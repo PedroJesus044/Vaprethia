@@ -229,7 +229,7 @@ input::-webkit-inner-spin-button {
 .item85{ grid-area: otros; }
 .item86{ grid-area: fecha_val_cardvsc; }
 .item87{ grid-area: ecg; }
-.item88{ grid-area: rx_torac; }
+.item88{ grid-area: rx_torax; }
 .item89{ grid-area: espirometria; }
 .item90{ grid-area: cv; }
 .item91{ grid-area: cvf; }
@@ -247,9 +247,9 @@ input::-webkit-inner-spin-button {
 .item103{ grid-area: asa; }
 .item104{ grid-area: riesgo_tromboemb; }
 .item105{ grid-area: raq_ue; }
-.item106{ grid-area: raq_14; }
+.item106{ grid-area: raq_16; }
 .item107{ grid-area: raq_ab; }
-.item108{ grid-area: plan_anast_suger; }
+.item108{ grid-area: plan_anest_suger; }
 .item109{ grid-area: obs_lab_gab; }
 .item110{ grid-area: se_recom_operar; }
 .item111{ grid-area: obs_recom_oper; }
@@ -262,6 +262,7 @@ input::-webkit-inner-spin-button {
 .item1003{ grid-area: sep_pers_pat; }
 .item1004{ grid-area: sep_explor_fisica; }
 .item1005{ grid-area: sep_lab_y_gab; }
+.item1006{ grid-area: sep_raq; }
 
 .item2000{ grid-area: submit; }
 
@@ -285,8 +286,7 @@ input::-webkit-inner-spin-button {
   grid-template-areas:
     'sep_ante_her sep_ante_her sep_ante_her sep_ante_her'
     'dm has cardiopatas ca'
-    'tb evc otras otras'
-    'submit submit  submit  submit';
+    'tb evc otras otras';
   gap: 10px;
   padding: 10px;
 }
@@ -352,8 +352,22 @@ input::-webkit-inner-spin-button {
 .grid-container-lab-y-gab {
   display: grid;
   grid-template-areas:
-    'sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab'
-    'fecha_realiza fecha_realiza fecha_realiza fecha_realiza';
+    'sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab'
+    'fecha_realiza fecha_realiza fecha_realiza fecha_realiza fecha_realiza fecha_realiza'
+    'hb hto leucocitos leucocitos plaquetas plaquetas'
+    'glucosa urea creatinina tp ttpa ttpa'
+    'inr inr otros otros otros otros'
+    'fecha_val_cardvsc fecha_val_cardvsc fecha_val_cardvsc fecha_val_cardvsc fecha_val_cardvsc fecha_val_cardvsc'
+    'ecg ecg ecg ecg ecg ecg'
+    'rx_torax rx_torax rx_torax rx_torax rx_torax rx_torax'
+    'espirometria cv cvf vmv vef1 fef25_75'
+    'gasometria ph pco2 po2 hco3 eb'
+    'sato2 sato2 sato2 sato2 sato2 sato2'
+    'goldman goldman asa asa riesgo_tromboemb riesgo_tromboemb'
+    'sep_raq sep_raq sep_raq sep_raq sep_raq sep_raq'
+    'raq_ue raq_ue raq_16 raq_16 raq_ab raq_ab'
+    'plan_anest_suger plan_anest_suger plan_anest_suger plan_anest_suger plan_anest_suger plan_anest_suger'
+    'obs_lab_gab obs_lab_gab obs_lab_gab obs_lab_gab obs_lab_gab obs_lab_gab';
   gap: 10px;
   padding: 10px;
 }
