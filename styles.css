@@ -215,7 +215,7 @@ input::-webkit-inner-spin-button {
 .item71{ grid-area: abdomen; }
 .item72{ grid-area: extremidades; }
 .item73{ grid-area: resto_ef; }
-.item74{ grid-area: fecha_realza; }
+.item74{ grid-area: fecha_realiza; }
 .item75{ grid-area: hb; }
 .item76{ grid-area: hto; }
 .item77{ grid-area: leucocitos; }
@@ -352,7 +352,8 @@ input::-webkit-inner-spin-button {
 .grid-container-lab-y-gab {
   display: grid;
   grid-template-areas:
-    'sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab';
+    'sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab sep_lab_y_gab'
+    'fecha_realiza fecha_realiza fecha_realiza fecha_realiza';
   gap: 10px;
   padding: 10px;
 }

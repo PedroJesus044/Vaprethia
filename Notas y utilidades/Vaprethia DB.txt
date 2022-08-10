@@ -77,7 +77,7 @@ abdomen text,
 extremidades text,
 resto_ef text,
 
-fecha_realza date,
+fecha_realiza date,
 hb text,
 hto text,
 leucocitos text,
