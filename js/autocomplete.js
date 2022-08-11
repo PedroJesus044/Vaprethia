@@ -12,7 +12,6 @@ function getPacientes(){
     db = conn.db
 
     db.each("select id, nombre from pacientes", (err, row) => {
-        id_paciente.push(row.id)
         nombre_paciente.push(row.nombre)
     });
 }
@@ -35,17 +34,36 @@ const searchStates = async searchText =>{
 const outputHtml = matches =>{
     if (matches.length > 0) {
         const html = matches.map(
-            match => `
-            <option value="${match}">
+            match => 
+            `
+            <option value="${match}" label = "${match}">
         `).join('');
         matchList.innerHTML = html;
     }
 }
 
 search.addEventListener('keypress', function (e) {
-    if(e.key !== 'Enter') searchStates(search.value);
+    if(e.key !== 'Enter') searchStates(search.value)
 });
 
+function clearList(){
+    matches = [];
+    matchList.innerHTML = '';
+}
+
+function llenaCampos(name){
+    
+}
+
+function despliegaPaciente(){
+    clearList();
+    llenaCampos(search.value)
+
+}
+
 search.addEventListener('input', ()=> searchStates(search.value));
+
+search.addEventListener('change', (event) => despliegaPaciente());
+matchList.addEventListener('onclick', ()=> despliegaPaciente());
 
 getPacientes()
