@@ -68,7 +68,7 @@ function llenaCampos(name){
     varchars = ['clave','nombre','nombre_medico','edad','talla','peso','cama','no_expediente']
     fechas = ['fecha','fecha_realiza','fecha_val_cardvsc']
 
-    let datos = getPaciente(name) // => Promise { <pending> }
+    let datos = getPaciente(name)
 	.then((results) => {
 		textos.forEach(element => {
             document.getElementById(element).value = results[element]
