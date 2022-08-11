@@ -3,7 +3,7 @@ const dao = require('./js/dao')
 const search = document.getElementById('nombre');
 const matchList = document.getElementById('pacientes');
 
-var id_paciente = []
+var paciente = []
 var nombre_paciente = []
 
 function getPacientes(){
@@ -51,8 +51,41 @@ function clearList(){
     matchList.innerHTML = '';
 }
 
+const getPaciente = (name) => {
+	return new Promise((resolve, reject) => {
+		db.serialize(() => {
+			db.get('SELECT * FROM pacientes WHERE nombre = ?', name, (err, rows) => {
+				if (err) reject(err);
+				resolve(rows);
+			});
+		});
+	});
+};
+
 function llenaCampos(name){
-    
+    textos = ['diag_preoper','oper_proy','otras','originario','residente','religion','frecuencia_tab','frecuencia_alc','aseo_dental','toxicom_desc','anestesico_quir','complic_desc','transfunc_desc','alergicos','asmaticos','diabetes','tratamiento_diab','hipertension','tratamiento_hiper','cardiopatias','hepaticos','neurologicos','traumaticos','nefropatias','endocrinopatias','obesidad','neoplasicos','evc_desc','obs_per_pat','ta','fc','fr','temperatura','craneo','pupilas','conjuntivas','narinas','mucosa_oral','cuello','traquea','cardiopulmonar','abdomen','extremidades','resto_ef','hb','hto','leucocitos','plaquetas','glucosa','urea','creatinina','tp','ttpa','inr','otros','ecg','rx_torax','cv','cvf','vmv','vef1','fef25_75','ph','pco2','po2','hco3','eb','sato2','goldman','asa','plan_anest_suger','obs_lab_gab','obs_recom_oper']
+    selects = ['dm','has','cardiopatas','ca','tb','evc','grupo','rh','tabaquismo','alcoholismo','habitos_diet','toxicomanias','complicaciones','transfuncionales','protesis_dentales','tipo_pro_dent','mallampati','patil_aldretti','apertura_oral','espirometria','gasometria','riesgo_tromboemb','raq_ue','raq_16','raq_ab','se_recom_operar','sexo','pro_int_dif']
+    varchars = ['clave','nombre','nombre_medico','edad','talla','peso','cama','no_expediente']
+    fechas = ['fecha','fecha_realiza','fecha_val_cardvsc']
+
+    let datos = getPaciente(name) // => Promise { <pending> }
+	.then((results) => {
+		textos.forEach(element => {
+            document.getElementById(element).value = results[element]
+        });
+
+        selects.forEach(element => {
+            document.getElementById(element).value = results[element]
+        });
+
+        varchars.forEach(element => {
+            console.log(element, results[element], document.getElementById(element).value)
+        });
+
+        fechas.forEach(element => {
+            document.getElementById(element).value = results[element]
+        });
+	});
 }
 
 function despliegaPaciente(){

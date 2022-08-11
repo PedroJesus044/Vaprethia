@@ -40,7 +40,7 @@
       <h2 class="text-center">Valoración preanestésica</h2>
       
       <form>
-        <input type="hidden" name="clave" id="clave">
+        <input type="hidden" name="id" id="id">
         <div class="grid-container-fech-id">
 
           <div class="mb-3 item1000">
@@ -71,7 +71,7 @@
 
           <div class="mb-3 item5">
             <label for="no_expediente">No. Expediente</label>
-            <input type="text" id="n_expediente" class="form-control">
+            <input type="text" id="no_expediente" class="form-control">
           </div>
 
           <div class="mb-3 item6">
@@ -209,8 +209,8 @@
             <label for="rh">Rh</label>
             <select id="rh" class="form-control">
               <option value="No especificado">No especificado</option>
-              <option value="A">+</option>
-              <option value="B">-</option>
+              <option value="+">+</option>
+              <option value="-">-</option>
             </select>
           </div>
 
@@ -733,7 +733,7 @@
           </div>
 
           <div class="mb-3 item106">
-            <select id="raq_14" class="form-control">
+            <select id="raq_16" class="form-control">
               <option value="No especificado">No especificado</option>
               <option value="I">I</option>
               <option value="II">II</option>
@@ -797,13 +797,15 @@
             <label for="clave">Clave</label>
             <input type="text" id="clave" class="form-control">
           </div>
+
+
         </div>
 
-        <div class="grid-container-buttons">
+        <!--<div class="grid-container-buttons">
           <div class="mb-3 item2000">
             <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
           </div>
-        </div>
+        </div>-->
 
       </form>
     </div>
