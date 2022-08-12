@@ -14,9 +14,11 @@
         </div>-->
 
         <div id="menu">
-          <button class="btn rounded m-button text-white">Archivo</button>
-          <button class="btn rounded m-button text-white">Editar</button>
-          <button class="btn rounded m-button text-white">Ayuda</button>
+          <button class="btn rounded m-button text-white" id="guardar">Guardar</button>
+          <button class="btn rounded m-button text-white" id="actualizar">Actualizar paciente</button>
+          <button class="btn rounded m-button text-white" id="limpiar-campos">Limpiar campos</button>
+          <button class="btn rounded m-button text-white" id="exportar-pdf">Exportar a PDF</button>
+          <button class="btn rounded m-button text-white" id="m-button-ayuda">Ayuda</button>
         </div>
 
         <div id="window-controls">
@@ -39,7 +41,7 @@
       </div>
     </header>
 
-    <div class="main-container">
+    <div class="main-container" id = "contenedor-de-todo">
       <br>
       <h1 class="text-center">Hospital general "Dr. Fernando Quiróz G."</h1>
       <h2 class="text-center">Valoración preanestésica</h2>
@@ -139,7 +141,7 @@
           </div>
 
           <div class="mb-3 item14">
-            <label for="cardiopatas">CARDIÓPATAS</label>
+            <label for="cardiopatas">CARDIOPATÍAS</label>
             <select id="cardiopatas" class="form-control">
               <option value="No especificado">No especificado</option>
               <option value="Si">Si</option>
@@ -205,8 +207,8 @@
               <option value="A">A</option>
               <option value="B">B</option>
               <option value="AB">AB</option>
-              <option value="O">No</option>
-              <option value="Ignora">Si</option>
+              <option value="O">O</option>
+              <option value="Ignora">Ignora</option>
             </select>
           </div>
 
@@ -819,6 +821,10 @@
     <script src="./renderer.js"></script>
     <script src="./js/autocomplete.js"></script>
     <script src="./js/autodate.js"></script>
+    <script src="./js/menu-actions.js"></script>
+    <script src="./js/pdfexport.js"></script>
+
+    <script src="./node_modules/html2pdf.js/dist/html2pdf.bundle.min.js"></script>
 
     <link href="bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>

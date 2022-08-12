@@ -18,17 +18,21 @@ function zfill(number, width) {
     }
   }
 
-const d = new Date();
-let hour = zfill(d.getHours(), 2) + ':' + zfill(d.getMinutes(), 2);
-var timeControl = document.getElementById("hora");
-timeControl.value = hour;
+function autodate(){
+    const d = new Date();
+    let hour = zfill(d.getHours(), 2) + ':' + zfill(d.getMinutes(), 2);
+    var timeControl = document.getElementById("hora");
+    timeControl.value = hour;
 
-timeControl = document.getElementById("fecha");
-var date = d.getFullYear()+'-'+zfill((d.getMonth()+1), 2)+'-'+zfill(d.getDate(), 2);
-timeControl.value = date;
+    timeControl = document.getElementById("fecha");
+    var date = d.getFullYear()+'-'+zfill((d.getMonth()+1), 2)+'-'+zfill(d.getDate(), 2);
+    timeControl.value = date;
 
-timeControl = document.getElementById("fecha_realiza");
-timeControl.value = date;
+    timeControl = document.getElementById("fecha_realiza");
+    timeControl.value = date;
 
-timeControl = document.getElementById("fecha_val_cardvsc");
-timeControl.value = date;
+    timeControl = document.getElementById("fecha_val_cardvsc");
+    timeControl.value = date;
+}
+
+autodate()

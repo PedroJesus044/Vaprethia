@@ -1,7 +1,7 @@
 .open vaprethia.db
 
 create table pacientes(
-id integer not null primary key,
+id integer not null primary key not null,
 fecha date,
 cama varchar(50),
 nombre varchar(150),

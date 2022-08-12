@@ -3,7 +3,6 @@ const dao = require('./js/dao')
 const search = document.getElementById('nombre');
 const matchList = document.getElementById('pacientes');
 
-var paciente = []
 var nombre_paciente = []
 
 function getPacientes(){
@@ -17,7 +16,6 @@ function getPacientes(){
 }
 
 const searchStates = async searchText =>{
-
     let matches = nombre_paciente.filter(nombre=>{
         const regex = new RegExp(`^${searchText}`, 'gi');
         return nombre.match(regex)
